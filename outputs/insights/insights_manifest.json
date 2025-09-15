@@ -1,0 +1,17 @@
+{
+  "missions": [
+    "RR-1",
+    "RR-3",
+    "RR-6",
+    "RR-9",
+    "RR-12",
+    "RR-19"
+  ],
+  "scoreboard_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/all_missions_metrics_raw.csv",
+  "volatility_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/volatility_by_variable.csv",
+  "anomaly_calendar_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/anomaly_calendar_all_missions.csv",
+  "anomaly_rates_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/mission_anomaly_rates.csv",
+  "group_comparison_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/group_comparison_metrics.csv",
+  "top_forecast_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/top_forecastable_by_mission.csv",
+  "top_anomalous_csv": "/Users/kennethjenkins/Citizen Science/Data Mining for Space Habitats/outputs/insights/top_anomalous_by_mission.csv"
+}

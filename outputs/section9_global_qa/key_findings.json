@@ -1,0 +1,230 @@
+{
+  "missions": [
+    "RR-1",
+    "RR-3",
+    "RR-6",
+    "RR-9",
+    "RR-12",
+    "RR-19"
+  ],
+  "coverage": {
+    "avg_coverage_pct": 99.86,
+    "median_coverage_pct": 100.0,
+    "worst_coverage_top10": [
+      {
+        "RR": "RR-6",
+        "Variable": "RH_percent_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 98.4336836444305
+      },
+      {
+        "RR": "RR-6",
+        "Variable": "Temp_degC_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 98.4336836444305
+      },
+      {
+        "RR": "RR-6",
+        "Variable": "CO2_ppm_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 98.4336836444305
+      },
+      {
+        "RR": "RR-3",
+        "Variable": "RH_percent_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.89166064781377
+      },
+      {
+        "RR": "RR-3",
+        "Variable": "CO2_ppm_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.89166064781377
+      },
+      {
+        "RR": "RR-3",
+        "Variable": "Temp_degC_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.89166064781377
+      },
+      {
+        "RR": "RR-12",
+        "Variable": "RH_percent_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.91353147623812
+      },
+      {
+        "RR": "RR-12",
+        "Variable": "Temp_degC_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.91353147623812
+      },
+      {
+        "RR": "RR-12",
+        "Variable": "CO2_ppm_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.91353147623812
+      },
+      {
+        "RR": "RR-1",
+        "Variable": "CO2_ppm_ISS",
+        "Type": "telemetry",
+        "Coverage_Pct": 99.92889741385012
+      }
+    ]
+  },
+  "quality": {
+    "orig_pct": 62.77,
+    "interp_pct": 37.04,
+    "missing_pct": 0.19
+  },
+  "seasonality": {
+    "n_series": 42,
+    "median_strength": 0.049,
+    "top5": [
+      {
+        "Mission": "RR-6",
+        "Type": "radiation",
+        "Variable": "Accumulated_Dose_mGy_d",
+        "Seasonality_Strength": 0.9983958123406528
+      },
+      {
+        "Mission": "RR-1",
+        "Type": "radiation",
+        "Variable": "Accumulated_Dose_mGy_d",
+        "Seasonality_Strength": 0.9983826405189244
+      },
+      {
+        "Mission": "RR-12",
+        "Type": "radiation",
+        "Variable": "Accumulated_Dose_mGy_d",
+        "Seasonality_Strength": 0.9970163219463322
+      },
+      {
+        "Mission": "RR-19",
+        "Type": "radiation",
+        "Variable": "Accumulated_Dose_mGy_d",
+        "Seasonality_Strength": 0.996714705941521
+      },
+      {
+        "Mission": "RR-3",
+        "Type": "radiation",
+        "Variable": "Accumulated_Dose_mGy_d",
+        "Seasonality_Strength": 0.9958269650366128
+      }
+    ]
+  },
+  "granger": {
+    "edges_total": 50,
+    "edges_by_direction": {
+      "radiation\u2192telemetry": 7,
+      "telemetry\u2192radiation": 6,
+      "within-domain": 37
+    },
+    "top_edge_example": [
+      {
+        "Mission": "RR-3",
+        "Source": "SAA_Dose_mGy_d",
+        "Target": "Total_Dose_mGy_d",
+        "Lag": 12,
+        "qvalue": 1.9926011786572257e-82,
+        "MinusLog10_q": 81.70057961712538
+      }
+    ]
+  },
+  "forecast": {
+    "median_rmse_by_model": {
+      "LSTM": 0.038
+    },
+    "best_model_counts": {
+      "LSTM": 7
+    }
+  },
+  "anomalies": {
+    "avg_anoms_per_day_overall": 15.539,
+    "top10_rate_examples": [
+      {
+        "RR": "RR-9",
+        "Variable": "RH_percent_ISS",
+        "Type": "telemetry",
+        "Anomalies_per_day_Z3": 58.25714285714286
+      },
+      {
+        "RR": "RR-1",
+        "Variable": "RH_percent_ISS",
+        "Type": "telemetry",
+        "Anomalies_per_day_Z3": 54.23809523809524
+      },
+      {
+        "RR": "RR-1",
+        "Variable": "Temp_degC_ISS",
+        "Type": "telemetry",
+        "Anomalies_per_day_Z3": 49.07142857142857
+      },
+      {
+        "RR": "RR-3",
+        "Variable": "RH_percent_ISS",
+        "Type": "telemetry",
+        "Anomalies_per_day_Z3": 46.12
+      },
+      {
+        "RR": "RR-9",
+        "Variable": "Total_Dose_mGy_d",
+        "Type": "radiation",
+        "Anomalies_per_day_Z3": 45.0
+      },
+      {
+        "RR": "RR-9",
+        "Variable": "SAA_Dose_mGy_d",
+        "Type": "radiation",
+        "Anomalies_per_day_Z3": 45.0
+      },
+      {
+        "RR": "RR-9",
+        "Variable": "GCR_Dose_mGy_d",
+        "Type": "radiation",
+        "Anomalies_per_day_Z3": 45.0
+      },
+      {
+        "RR": "RR-12",
+        "Variable": "Temp_degC_ISS",
+        "Type": "telemetry",
+        "Anomalies_per_day_Z3": 42.926829268292686
+      },
+      {
+        "RR": "RR-12",
+        "Variable": "Total_Dose_mGy_d",
+        "Type": "radiation",
+        "Anomalies_per_day_Z3": 38.91891891891892
+      },
+      {
+        "RR": "RR-12",
+        "Variable": "SAA_Dose_mGy_d",
+        "Type": "radiation",
+        "Anomalies_per_day_Z3": 38.91891891891892
+      }
+    ]
+  },
+  "omics": {
+    "dataset_counts": [
+      {
+        "GLDS": "GLDS-98",
+        "Total_DEG_q<0.05": 67,
+        "Up": 26,
+        "Down": 41
+      },
+      {
+        "GLDS": "GLDS-99",
+        "Total_DEG_q<0.05": 2809,
+        "Up": 1564,
+        "Down": 1245
+      },
+      {
+        "GLDS": "GLDS-104",
+        "Total_DEG_q<0.05": 4931,
+        "Up": 2360,
+        "Down": 2571
+      }
+    ]
+  }
+}

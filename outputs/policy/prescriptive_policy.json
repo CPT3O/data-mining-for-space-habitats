@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "version": "0.3.0",
+    "generated_utc": "2025-09-14T16:54:10.006334+00:00",
+    "preliminary": true,
+    "revision_pending": "Cross-mission SARIMAX benchmarking",
+    "notes": "Percentile-derived bounds; tune with ROC once labeled events exist."
+  },
+  "missions": {
+    "RR-1": {
+      "thresholds": {
+        "CO2_ppm_ISS": {
+          "hi": 4156.0
+        },
+        "Temp_degC_ISS": {
+          "lo": 22.1,
+          "hi": 23.74
+        },
+        "RH_percent_ISS": {
+          "lo": 34.0,
+          "hi": 52.0
+        }
+      },
+      "radiation": {
+        "avoid_when": {
+          "SAA_Dose_mGy_d": {
+            "hi": 0.09,
+            "sustain_minutes": 30
+          }
+        },
+        "dose_monitor": {
+          "Accumulated_Dose_mGy_d_delta": {
+            "window_min": 1440,
+            "hi": 0.0
+          }
+        }
+      },
+      "sampling_triggers": {
+        "omics": {
+          "any_anomaly_minutes": 15,
+          "ae_error_ref": 0.95
+        },
+        "physiology_placeholders": [
+          "corticosterone",
+          "bone_density",
+          "muscle_mass"
+        ],
+        "ae_ref_Temp_degC_ISS": 2.0466655769268986e-05,
+        "ae_ref_RH_percent_ISS": 0.0016145660774782,
+        "ae_ref_CO2_ppm_ISS": 0.001428821706213,
+        "ae_ref_GCR_Dose_mGy_d": 0.0242946073412895,
+        "ae_ref_SAA_Dose_mGy_d": 0.003981661517173,
+        "ae_ref_Total_Dose_mGy_d": 0.0046819867566227,
+        "ae_ref_Accumulated_Dose_mGy_d": 0.3167878091335296
+      },
+      "forecasting": {
+        "update_interval_min": 60,
+        "model_baselines": [
+          "LSTM_univariate",
+          "SARIMAX_seasonal",
+          "VAR_multivariate"
+        ]
+      },
+      "scheduling": {
+        "prefer_hours_utc_low_CO2": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    "RR-3": {
+      "thresholds": {
+        "CO2_ppm_ISS": {
+          "hi": 5895.0
+        },
+        "Temp_degC_ISS": {
+          "lo": 19.04,
+          "hi": 22.36
+        },
+        "RH_percent_ISS": {
+          "lo": 38.0,
+          "hi": 47.0
+        }
+      },
+      "radiation": {
+        "avoid_when": {
+          "SAA_Dose_mGy_d": {
+            "hi": 0.1,
+            "sustain_minutes": 30
+          }
+        },
+        "dose_monitor": {
+          "Accumulated_Dose_mGy_d_delta": {
+            "window_min": 1440,
+            "hi": 0.0
+          }
+        }
+      },
+      "sampling_triggers": {
+        "omics": {
+          "any_anomaly_minutes": 15,
+          "ae_error_ref": 0.95
+        },
+        "physiology_placeholders": [
+          "corticosterone",
+          "bone_density",
+          "muscle_mass"
+        ],
+        "ae_ref_Temp_degC_ISS": 0.95,
+        "ae_ref_RH_percent_ISS": 0.95,
+        "ae_ref_CO2_ppm_ISS": 0.95,
+        "ae_ref_GCR_Dose_mGy_d": 0.95,
+        "ae_ref_SAA_Dose_mGy_d": 0.95,
+        "ae_ref_Total_Dose_mGy_d": 0.95,
+        "ae_ref_Accumulated_Dose_mGy_d": 0.95
+      },
+      "forecasting": {
+        "update_interval_min": 60,
+        "model_baselines": [
+          "LSTM_univariate",
+          "SARIMAX_seasonal",
+          "VAR_multivariate"
+        ]
+      },
+      "scheduling": {
+        "prefer_hours_utc_low_CO2": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    "RR-6": {
+      "thresholds": {
+        "CO2_ppm_ISS": {
+          "hi": 3663.6
+        },
+        "Temp_degC_ISS": {
+          "lo": 22.26,
+          "hi": 23.8
+        },
+        "RH_percent_ISS": {
+          "lo": 38.0,
+          "hi": 50.0
+        }
+      },
+      "radiation": {
+        "avoid_when": {
+          "SAA_Dose_mGy_d": {
+            "hi": 0.13,
+            "sustain_minutes": 30
+          }
+        },
+        "dose_monitor": {
+          "Accumulated_Dose_mGy_d_delta": {
+            "window_min": 1440,
+            "hi": 0.0
+          }
+        }
+      },
+      "sampling_triggers": {
+        "omics": {
+          "any_anomaly_minutes": 15,
+          "ae_error_ref": 0.95
+        },
+        "physiology_placeholders": [
+          "corticosterone",
+          "bone_density",
+          "muscle_mass"
+        ],
+        "ae_ref_Temp_degC_ISS": 0.95,
+        "ae_ref_RH_percent_ISS": 0.95,
+        "ae_ref_CO2_ppm_ISS": 0.95,
+        "ae_ref_GCR_Dose_mGy_d": 0.95,
+        "ae_ref_SAA_Dose_mGy_d": 0.95,
+        "ae_ref_Total_Dose_mGy_d": 0.95,
+        "ae_ref_Accumulated_Dose_mGy_d": 0.95
+      },
+      "forecasting": {
+        "update_interval_min": 60,
+        "model_baselines": [
+          "LSTM_univariate",
+          "SARIMAX_seasonal",
+          "VAR_multivariate"
+        ]
+      },
+      "scheduling": {
+        "prefer_hours_utc_low_CO2": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    "RR-9": {
+      "thresholds": {
+        "CO2_ppm_ISS": {
+          "hi": 3669.0
+        },
+        "Temp_degC_ISS": {
+          "lo": 23.3,
+          "hi": 24.06
+        },
+        "RH_percent_ISS": {
+          "lo": 36.0,
+          "hi": 43.0
+        }
+      },
+      "radiation": {
+        "avoid_when": {
+          "SAA_Dose_mGy_d": {
+            "hi": 0.21,
+            "sustain_minutes": 30
+          }
+        },
+        "dose_monitor": {
+          "Accumulated_Dose_mGy_d_delta": {
+            "window_min": 1440,
+            "hi": 0.0
+          }
+        }
+      },
+      "sampling_triggers": {
+        "omics": {
+          "any_anomaly_minutes": 15,
+          "ae_error_ref": 0.95
+        },
+        "physiology_placeholders": [
+          "corticosterone",
+          "bone_density",
+          "muscle_mass"
+        ],
+        "ae_ref_Temp_degC_ISS": 0.95,
+        "ae_ref_RH_percent_ISS": 0.95,
+        "ae_ref_CO2_ppm_ISS": 0.95,
+        "ae_ref_GCR_Dose_mGy_d": 0.95,
+        "ae_ref_SAA_Dose_mGy_d": 0.95,
+        "ae_ref_Total_Dose_mGy_d": 0.95,
+        "ae_ref_Accumulated_Dose_mGy_d": 0.95
+      },
+      "forecasting": {
+        "update_interval_min": 60,
+        "model_baselines": [
+          "LSTM_univariate",
+          "SARIMAX_seasonal",
+          "VAR_multivariate"
+        ]
+      },
+      "scheduling": {
+        "prefer_hours_utc_low_CO2": [
+          0,
+          1,
+          2,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    "RR-12": {
+      "thresholds": {
+        "CO2_ppm_ISS": {
+          "hi": 3245.4
+        },
+        "Temp_degC_ISS": {
+          "lo": 20.88,
+          "hi": 23.0
+        },
+        "RH_percent_ISS": {
+          "lo": 38.0,
+          "hi": 47.0
+        }
+      },
+      "radiation": {
+        "avoid_when": {
+          "SAA_Dose_mGy_d": {
+            "hi": 0.24,
+            "sustain_minutes": 30
+          }
+        },
+        "dose_monitor": {
+          "Accumulated_Dose_mGy_d_delta": {
+            "window_min": 1440,
+            "hi": 0.0
+          }
+        }
+      },
+      "sampling_triggers": {
+        "omics": {
+          "any_anomaly_minutes": 15,
+          "ae_error_ref": 0.95
+        },
+        "physiology_placeholders": [
+          "corticosterone",
+          "bone_density",
+          "muscle_mass"
+        ],
+        "ae_ref_Temp_degC_ISS": 0.95,
+        "ae_ref_RH_percent_ISS": 0.95,
+        "ae_ref_CO2_ppm_ISS": 0.95,
+        "ae_ref_GCR_Dose_mGy_d": 0.95,
+        "ae_ref_SAA_Dose_mGy_d": 0.95,
+        "ae_ref_Total_Dose_mGy_d": 0.95,
+        "ae_ref_Accumulated_Dose_mGy_d": 0.95
+      },
+      "forecasting": {
+        "update_interval_min": 60,
+        "model_baselines": [
+          "LSTM_univariate",
+          "SARIMAX_seasonal",
+          "VAR_multivariate"
+        ]
+      },
+      "scheduling": {
+        "prefer_hours_utc_low_CO2": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    "RR-19": {
+      "thresholds": {
+        "CO2_ppm_ISS": {
+          "hi": 2987.0
+        },
+        "Temp_degC_ISS": {
+          "lo": 21.1,
+          "hi": 23.8
+        },
+        "RH_percent_ISS": {
+          "lo": 34.0,
+          "hi": 50.0
+        }
+      },
+      "radiation": {
+        "avoid_when": {
+          "SAA_Dose_mGy_d": {
+            "hi": 0.24,
+            "sustain_minutes": 30
+          }
+        },
+        "dose_monitor": {
+          "Accumulated_Dose_mGy_d_delta": {
+            "window_min": 1440,
+            "hi": 0.0
+          }
+        }
+      },
+      "sampling_triggers": {
+        "omics": {
+          "any_anomaly_minutes": 15,
+          "ae_error_ref": 0.95
+        },
+        "physiology_placeholders": [
+          "corticosterone",
+          "bone_density",
+          "muscle_mass"
+        ],
+        "ae_ref_Temp_degC_ISS": 0.95,
+        "ae_ref_RH_percent_ISS": 0.95,
+        "ae_ref_CO2_ppm_ISS": 0.95,
+        "ae_ref_GCR_Dose_mGy_d": 0.95,
+        "ae_ref_SAA_Dose_mGy_d": 0.95,
+        "ae_ref_Total_Dose_mGy_d": 0.95,
+        "ae_ref_Accumulated_Dose_mGy_d": 0.95
+      },
+      "forecasting": {
+        "update_interval_min": 60,
+        "model_baselines": [
+          "LSTM_univariate",
+          "SARIMAX_seasonal",
+          "VAR_multivariate"
+        ]
+      },
+      "scheduling": {
+        "prefer_hours_utc_low_CO2": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      }
+    }
+  }
+}
